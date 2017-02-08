@@ -49,6 +49,29 @@
       });
     });
 
+    describe('Return the array itself if the array only contains an element', function () {
+
+      it('should return [4] for [4]', function () {
+        expect(findMinMax([4])).toEqual([4]);
+      });
+
+      it('should return [1] for [1]', function () {
+        expect(findMinMax([1])).toEqual([1]);
+      });
+
+      it('should return [10] for [10]', function () {
+        expect(findMinMax([10])).toEqual([10]);
+      });
+
+      it('should return [7] for [7]', function () {
+        expect(findMinMax([7])).toEqual([7]);
+      });
+
+      it('should return [5] for [5]', function () {
+        expect(findMinMax([5])).toEqual([5]);
+      });
+    });
+
   });
 
 })();
