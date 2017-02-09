@@ -73,6 +73,18 @@
       });
     });
 
+    describe('It should work as expected for large numbers', function () {
+
+      it('should return [10000000, 10000009] for [10000000, 10000001, 10000009]', function () {
+        expect(findMinMax([10000000, 10000001, 10000009])).toEqual([10000000, 10000009]);
+      });
+
+      it('should return [200000000, 200000112] for [200000000, 200000005, 200000112]', function () {
+        expect(findMinMax([200000000, 200000005, 200000112])).toEqual([200000000, 200000112]);
+      });
+
+    });
+
   });
 
 })();
