@@ -12,11 +12,12 @@ function geometricProgression(numberArray) {
 function arithmeticProgression(numberArray) {
 	var diff = numberArray[1] - numberArray[0];
   var notArithmetic = numberArray.find((number, index) => numberArray[index+1] - number !== diff);
-  if (notArithmetic) {
-  	return false;
+  console.log(notArithmetic);
+  if (notArithmetic === numberArray[numberArray.length-1]) {
+  	return true;
   }
   else {
-  	return true;
+  	return false;
   }
 }
 
