@@ -4,13 +4,7 @@ equal the square root of the number in-between them
 */
 function isGeometricProgression(numbers) {
   for (var i = 0; i < numbers.length - 2; i++) {
-    if (numbers[i] * numbers[i+2] !== Math.pow(numbers[i + 1], 2)) {
-      return false;
-    }
-
-    else {
-      return true;
-    }
+    return (numbers[i] * numbers[i+2] === Math.pow(numbers[i + 1], 2))
   }
 }
 
@@ -24,13 +18,7 @@ function isArithmeticProgression(numbers) {
   we test for it and return true if it is the one returned. Else, false is returned.
   */
   var arithmetic = numbers.find((number, index) => numbers[index+1] - number !== diff);
-  if (arithmetic === numbers[numbers.length - 1]) {
-  	return true;
-  }
-
-  else {
-  	return false;
-  }
+  return (arithmetic === numbers[numbers.length - 1]);
 }
 
 function aritGeo(numbers) {
@@ -45,7 +33,7 @@ function aritGeo(numbers) {
   else if (isArithmeticProgression(numbers)) {
     return 'Arithmetic';
   }
-  
+
   else {
     return -1;
   }
