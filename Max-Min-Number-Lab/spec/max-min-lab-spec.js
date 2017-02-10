@@ -3,9 +3,7 @@
   var findMinMax = require('../app/max-min-lab.js');
 
   describe('Min-Max Numbers in a List: ', function () {
-
     describe('Return the min and max number in the list in a new list follows `[min, max]`', function () {
-
       it('should return [1,4] for [1, 2, 3 , 4]', function () {
         expect(findMinMax([1, 2, 3, 4])).toEqual([1, 4]);
       });
@@ -28,7 +26,6 @@
     });
 
     describe('Return the number in the list in a new list follows `[min]` when the number is the min and max number in that list', function () {
-
       it('should return [4] for [4, 4, 4, 4]', function () {
         expect(findMinMax([4, 4, 4, 4])).toEqual([4]);
       });
@@ -51,7 +48,6 @@
     });
 
     describe('Return the array itself if the array only contains an element', function () {
-
       it('should return [4] for [4]', function () {
         expect(findMinMax([4])).toEqual([4]);
       });
@@ -74,7 +70,6 @@
     });
 
     describe('It should work as expected for large numbers', function () {
-
       it('should return [10000000, 10000009] for [10000000, 10000001, 10000009]', function () {
         expect(findMinMax([10000000, 10000001, 10000009])).toEqual([10000000, 10000009]);
       });
@@ -82,9 +77,6 @@
       it('should return [200000000, 200000112] for [200000000, 200000005, 200000112]', function () {
         expect(findMinMax([200000000, 200000005, 200000112])).toEqual([200000000, 200000112]);
       });
-
     });
-
   });
-
 })();

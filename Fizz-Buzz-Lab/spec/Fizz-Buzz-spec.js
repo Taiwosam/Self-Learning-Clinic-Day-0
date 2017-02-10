@@ -2,7 +2,6 @@
 var fizzBuzz = require('../app/fizzBuzz.js')
 
 describe("Fizz Buzz tests ", function() {
-
   it("should return `Fizz` for number divisible by 3", function() {
     expect(fizzBuzz(3)).toBe('Fizz');
   });
@@ -47,14 +46,13 @@ describe("Fizz Buzz tests ", function() {
     expect(fizzBuzz(150)).toBe('FizzBuzz');
   });
 
-  describe("The fizzBuzz function only takes a number ", function(){
+  describe("The fizzBuzz function only takes a number ", function() {
     it("should return an error for any string", function(){
       expect(function() { fizzBuzz('taiwo'); }).toThrow(new Error("fizzBuzz only takes numbers"));
     });
 
-    it("should return an error for a string containing numbers", function(){
+    it("should return an error for a string containing numbers", function() {
       expect(function() { fizzBuzz('15'); }).toThrow(new Error("fizzBuzz only takes numbers"));
     });
   });
-
 });

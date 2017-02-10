@@ -1,19 +1,15 @@
-(function(){
+(function() {
   'use strict';
   var aritGeo = require('../app/aritGeo.js');
 
   describe("Determine the sequence of an array of numbers: ", function() {
-
     describe("Case for an empty array", function() {
-
       it("should return 0 for an empty array", function() {
         expect(aritGeo([])).toEqual(0);
       });
-
     });
 
     describe("Case for an arithmetic sequence", function() {
-
       it("should return `Arithmetic` for [2, 4, 6, 8, 10]", function() {
         expect(aritGeo([2, 4, 6, 8, 10])).toEqual('Arithmetic');
       });
@@ -33,11 +29,9 @@
       it("should return `Arithmetic` for [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32]", function() {
         expect(aritGeo([1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23])).toEqual('Arithmetic');
       });
-
     });
 
     describe("Case for a geometric sequence", function() {
-
       it("should return `Geometric` for [2, 6, 18, 54, 162]", function() {
         expect(aritGeo([2, 6, 18, 54, 162])).toEqual('Geometric');
       });
@@ -61,11 +55,9 @@
       it("should return `Geometric` for [5, 10, 20, 40, 80, 160]", function() {
         expect(aritGeo([5, 10, 20, 40, 80, 160])).toEqual('Geometric');
       });
-
     });
 
     describe("Case for neither arithmetic nor geometric sequence", function() {
-
       it("should return -1 for [1, 2, 3, 5, 8]", function() {
         expect(aritGeo([1, 2, 3, 5, 8])).toEqual(-1);
       });
@@ -85,7 +77,6 @@
       it("should return -1 for [10, 3, 84, 12]", function() {
         expect(aritGeo([10, 3, 84, 12])).toEqual(-1);
       });
-
     });
   });
 })();

@@ -1,36 +1,51 @@
-function geometricProgression(numbers) {
+/**for a geometrically progressive list of numbers,
+the product of every first and third number should
+equal the square root of the number in-between them
+*/
+function isGeometricProgression(numbers) {
   for (var i = 0; i < numbers.length - 2; i++) {
-    if (numbers[i] * numbers[i+2] !== Math.pow(numbers[i + 1], 2)) { //for a geometrically progressive list of numbers, the product of the every first and third numbers  should
-      return false;                                               //equal the square root of the number in-between them
+    if (numbers[i] * numbers[i+2] !== Math.pow(numbers[i + 1], 2)) {
+      return false;
     }
+
     else {
       return true;
     }
   }
 }
 
-function arithmeticProgression(numbers) {
+function isArithmeticProgression(numbers) {
 	var diff = numbers[1] - numbers[0];
-  var arithmetic = numbers.find((number, index) => numbers[index+1] - number !== diff); //the find function finds the first element that satisfies the clause in the function,
-  if (arithmetic === numbers[numbers.length-1]) { //but because it traverses the whole array and tries to check the last element against the non-existent next element, it returns
-  	return true;                                             //true even for arithmetically progressive arrays. Because the last element only gets returned when the list is arithmetically progressive,
-  }                                                     //we test for it and return true if it is the one returned. Else, false is returned.
+
+  /**
+  the find function finds the first element that satisfies the clause in the function,
+  but because it traverses the whole array and tries to check the last element against the non-existent next element, it returns
+  true even for arithmetically progressive arrays. Because the last element only gets returned when the list is arithmetically progressive,
+  we test for it and return true if it is the one returned. Else, false is returned.
+  */
+  var arithmetic = numbers.find((number, index) => numbers[index+1] - number !== diff);
+  if (arithmetic === numbers[numbers.length - 1]) {
+  	return true;
+  }
+
   else {
   	return false;
   }
 }
 
-
 function aritGeo(numbers) {
-  if(numbers.length === 0) {
+  if (numbers.length === 0) {
     return 0;
   }
-  if (geometricProgression(numbers)) {
+
+  if (isGeometricProgression(numbers)) {
     return 'Geometric';
   }
-  else if (arithmeticProgression(numbers)) {
+
+  else if (isArithmeticProgression(numbers)) {
     return 'Arithmetic';
   }
+  
   else {
     return -1;
   }
