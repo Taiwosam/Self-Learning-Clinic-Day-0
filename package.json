@@ -1,0 +1,22 @@
+{
+  "name": "slc-day-0",
+  "version": "1.0.0",
+  "description": "Solutions to Day 0 Andelabs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taiwosam/Self-Learning-Clinic-Day-0.git"
+  },
+  "author": "Taiwo Adedotun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Taiwosam/Self-Learning-Clinic-Day-0/issues"
+  },
+  "homepage": "https://github.com/Taiwosam/Self-Learning-Clinic-Day-0#readme",
+  "dependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}
